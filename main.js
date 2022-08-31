@@ -1,5 +1,7 @@
 function a() {
-  console.log("A");
+  setTimeout(() => {
+    console.log("A");
+  }, 1000);
 }
 
 function b() {
