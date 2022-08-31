@@ -1,20 +1,13 @@
 function a(callback) {
-  const str = "Hello A";
   setTimeout(() => {
     console.log("A");
-    callback(str);
+    callback();
   }, 1000);
 }
 
 function b() {
   console.log("B");
 }
-a(function (event) {
-  console.log(event);
+a(function () {
   b();
-});
-
-//for information
-el.addEventListener("click", function (event) {
-  console.log(event);
 });
