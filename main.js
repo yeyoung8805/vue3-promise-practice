@@ -5,9 +5,15 @@ function a(callback) {
   }, 1000);
 }
 
-function b() {
-  console.log("B");
+function b(callback) {
+  setTimeout(() => {
+    console.log("B");
+    callback();
+  }, 1000);
 }
+
 a(function () {
-  b();
+  b(function () {
+    console.log("Done!");
+  });
 });
