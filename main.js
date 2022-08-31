@@ -46,10 +46,11 @@ function d() {
 }
 
 async function test() {
-  await a();
-  await b();
-  await c();
-  await d();
+  const h1 = await a();
+  const h2 = await b();
+  const h3 = await c();
+  const h4 = await d();
   console.log("Done!");
+  console.log(h1, h2, h3, h4);
 }
 test();
