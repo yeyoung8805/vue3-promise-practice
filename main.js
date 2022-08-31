@@ -10,7 +10,7 @@ function a() {
   return new Promise(function (resolve) {
     setTimeout(function () {
       console.log("A");
-      resolve();
+      resolve("Hello A");
     }, 1000);
   });
 }
@@ -19,7 +19,9 @@ function b() {
   console.log("B");
 }
 async function test() {
-  await a();
+  // const res = await axios.get();
+  const res = await a();
+  console.log('res:', res);
   b();
 }
 test();
