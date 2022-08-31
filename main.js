@@ -5,5 +5,5 @@ function a() {
 function b() {
   console.log("B");
 }
-b();
 a();
+b();
