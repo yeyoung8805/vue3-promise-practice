@@ -16,12 +16,40 @@ function a() {
 }
 
 function b() {
-  console.log("B");
+  //promise: 약속의 객체!
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      console.log("B");
+      resolve("Hello B");
+    }, 1000);
+  });
 }
+
+function c() {
+  //promise: 약속의 객체!
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      console.log("C");
+      resolve("Hello C");
+    }, 1000);
+  });
+}
+
+function d() {
+  //promise: 약속의 객체!
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      console.log("D");
+      resolve("Hello D");
+    }, 1000);
+  });
+}
+
 async function test() {
-  // const res = await axios.get();
-  const res = await a();
-  console.log('res:', res);
-  b();
+  await a();
+  await b();
+  await c();
+  await d();
+  console.log("Done!");
 }
 test();
